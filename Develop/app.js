@@ -48,6 +48,10 @@ function userPrompt(answers) {
               validate: (answer) => {
                 if (answer !== "") {
                   //validate ID's do not match
+                  if (idArray.includes(answer)) {
+                    return "Please choose a unique ID number.";
+                  }
+                  idArray.push(answer);
                   return true;
                 }
                 return "Please enter a valid ID.";
@@ -107,6 +111,10 @@ function userPrompt(answers) {
               validate: (answer) => {
                 if (answer !== "") {
                   //validate ID's do not match
+                  if (idArray.includes(answer)) {
+                      return "Please choose a unique ID number."
+                  }
+                  idArray.push(answer);
                   return true;
                 }
                 return "Please enter a valid ID number.";
@@ -167,6 +175,10 @@ function userPrompt(answers) {
               validate: (answer) => {
                 if (answer !== "") {
                   //validate ID's do not match
+                  if (idArray.includes(answer)) {
+                    return "Please choose a unique ID number.";
+                  }
+                  idArray.push(answer);
                   return true;
                 }
                 return "Please enter a valid ID number";
